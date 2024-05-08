@@ -1,4 +1,11 @@
-import { DescriptionProfile, NameProfile,TagsProfile, ProfileContainer, ProfileContent, ProfileImg } from "./styles"
+import {
+  DescriptionProfile,
+  NameProfile,
+  TagsProfile,
+  ProfileContainer,
+  ProfileContent,
+  ProfileImg,
+} from './styles'
 
 export const Profile = () => {
   return (
@@ -10,9 +17,9 @@ export const Profile = () => {
         <NameProfile>John Doe</NameProfile>
 
         <DescriptionProfile>
-          Lorem iDescriptionProfilesum dolor sit amet, consectetur adipiscing elit. 
-          Etiam nec odio vestibulum, rhoncus nisi sit amet, 
-          ultrices lacus. Nam eget purus nec nunc.
+          Lorem iDescriptionProfilesum dolor sit amet, consectetur adipiscing
+          elit. Etiam nec odio vestibulum, rhoncus nisi sit amet, ultrices
+          lacus. Nam eget purus nec nunc.
         </DescriptionProfile>
         <TagsProfile>
           <p>nickname</p>

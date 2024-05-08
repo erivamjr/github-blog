@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const HeaderContainer = styled.header`
-  background-color: ${props => props.theme["base-profile"]};
+  background-color: ${(props) => props.theme['base-profile']};
   color: #fff;
   padding: 10px;
 `
@@ -16,13 +16,11 @@ export const HeaderContent = styled.div`
   overflow: hidden;
 
   img:nth-child(1) {
-
   }
   img:nth-child(2) {
     margin-bottom: 8rem;
   }
 
   img:nth-child(3) {
-
   }
 `

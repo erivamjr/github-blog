@@ -1,10 +1,9 @@
-import { HeaderContainer, HeaderContent } from "./styles"
-import logoImg from "../../assets/logo.svg"
-import effectLeftImg from "../../assets/effect-left.svg"
-import effectRightImg from "../../assets/effect-right.svg"
+import { HeaderContainer, HeaderContent } from './styles'
+import logoImg from '../../assets/logo.svg'
+import effectLeftImg from '../../assets/effect-left.svg'
+import effectRightImg from '../../assets/effect-right.svg'
 
 export const Header = () => {
-
   return (
     <HeaderContainer>
       <HeaderContent>

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const ProfileContainer = styled.div`
   height: 212px;
@@ -8,7 +8,7 @@ export const ProfileContainer = styled.div`
   justify-content: center;
   padding: 2rem;
   margin: -6rem auto 0 auto;
-  background-color: ${props => props.theme["base-profile"]};
+  background-color: ${(props) => props.theme['base-profile']};
   border: 3px solid red;
   border-radius: 0.625rem;
 `
@@ -29,7 +29,7 @@ export const ProfileImg = styled.div`
 export const ProfileContent = styled.div`
   margin-left: 2rem;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
 `
 
 export const NameProfile = styled.h1`
@@ -41,7 +41,7 @@ export const DescriptionProfile = styled.p`
   font-size: 1rem;
   font-weight: 400;
   margin-top: 1rem;
-  color: ${props => props.theme["text-profile"]};
+  color: ${(props) => props.theme['text-profile']};
 `
 
 export const TagsProfile = styled.div`
@@ -50,7 +50,7 @@ export const TagsProfile = styled.div`
   p {
     font-size: 1rem;
     font-weight: 400;
-    color: ${props => props.theme["text-profile"]};
+    color: ${(props) => props.theme['text-profile']};
     margin-right: 1rem;
   }
 `
