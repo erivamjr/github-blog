@@ -17,7 +17,6 @@ export const ProfileImg = styled.div`
   width: 148px;
   height: 148px;
   border-radius: 0.5rem;
-  overflow: hidden;
   border: 3px solid red;
   img {
     width: 100%;
