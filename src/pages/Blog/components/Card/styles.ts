@@ -15,7 +15,8 @@ export const CardContent = styled.div`
 export const CardRef = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  align-items: center;
+  gap: 1rem;
 `
 
 export const CardTitle = styled.h1`
@@ -24,11 +25,17 @@ export const CardTitle = styled.h1`
 `
 
 export const CardDate = styled.p`
+  display: flex;
   color: ${({ theme }) => theme['base-span']};
   font-size: 0.875rem;
+  width: 150px;
+  align-self: flex-start;
 `
 
 export const CardText = styled.p`
   color: ${({ theme }) => theme['base-text']};
   margin-top: 1.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1rem;
 `

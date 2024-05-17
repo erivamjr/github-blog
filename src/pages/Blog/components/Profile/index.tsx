@@ -1,3 +1,5 @@
+import { useContext } from 'react'
+import { PostContext } from '../../../../context/PostContext'
 import {
   DescriptionProfile,
   NameProfile,
@@ -5,28 +7,30 @@ import {
   ProfileContainer,
   ProfileContent,
   ProfileImg,
+  NameContainer,
+  GitLink,
 } from './styles'
 
-export const Profile = () => {
+export function Profile() {
+  const { user } = useContext(PostContext)
   return (
     <ProfileContainer>
-      <ProfileImg>
-        <img src={''} alt="Profile" />
-      </ProfileImg>
-      <ProfileContent>
-        <NameProfile>John Doe</NameProfile>
+      <NameContainer>
+        <ProfileImg>
+          <img src={user.avatar_url} alt="Profile" />
+        </ProfileImg>
+        <ProfileContent>
+          <NameProfile>{user.name}</NameProfile>
 
-        <DescriptionProfile>
-          Lorem iDescriptionProfilesum dolor sit amet, consectetur adipiscing
-          elit. Etiam nec odio vestibulum, rhoncus nisi sit amet, ultrices
-          lacus. Nam eget purus nec nunc.
-        </DescriptionProfile>
-        <TagsProfile>
-          <p>nickname</p>
-          <p>Business</p>
-          <p>folows</p>
-        </TagsProfile>
-      </ProfileContent>
+          <DescriptionProfile>{user.bio}</DescriptionProfile>
+          <TagsProfile>
+            <p>{user.login}</p>
+            <p>{user.company}</p>
+            <p>{user.followers}</p>
+          </TagsProfile>
+        </ProfileContent>
+      </NameContainer>
+      <GitLink>GITHUB</GitLink>
     </ProfileContainer>
   )
 }
