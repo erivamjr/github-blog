@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const CardContent = styled.div`
@@ -22,6 +23,7 @@ export const CardRef = styled.div`
 export const CardTitle = styled.h1`
   color: ${({ theme }) => theme['base-title']};
   font-size: 1.25rem;
+  text-decoration: none;
 `
 
 export const CardDate = styled.p`
@@ -35,7 +37,15 @@ export const CardDate = styled.p`
 export const CardText = styled.p`
   color: ${({ theme }) => theme['base-text']};
   margin-top: 1.25rem;
+  font-size: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 1rem;
+`
+export const StyledLink = styled(Link)`
+  text-decoration: none;
 `
