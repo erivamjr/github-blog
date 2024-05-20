@@ -1,3 +1,4 @@
+import { PostProps } from '../../../../context/PostContext'
 import {
   LinkContainer,
   LinkContent,
@@ -7,18 +8,25 @@ import {
   TitleContentH1,
 } from './styles'
 
-export const TitleContent = () => {
+interface CardProps {
+  post?: PostProps
+}
+
+export const TitleContent = ({ post }: CardProps) => {
+  if (!post) {
+    return null // Retornar null se post for undefined
+  }
   return (
     <TitleContentContainer>
       <NavContent>
         <NavButton>VOLTAR</NavButton>
         <NavButton>VER NO GITHUB</NavButton>
       </NavContent>
-      <TitleContentH1>JavaScript data types and data structures</TitleContentH1>
+      <TitleContentH1>{post.title}</TitleContentH1>
       <LinkContainer>
-        <LinkContent>cameronwll</LinkContent>
-        <LinkContent>Há 1 dia</LinkContent>
-        <LinkContent>5 comentários</LinkContent>
+        <LinkContent>{post.user.login}</LinkContent>
+        <LinkContent>{post.created_at}</LinkContent>
+        <LinkContent>{post.comments} comentários</LinkContent>
       </LinkContainer>
     </TitleContentContainer>
   )
